@@ -67,20 +67,6 @@ function clicked() {
     })
 }
 
-//Time
-// const timeSec = document.createElement('div');
-// const h4 = document.createElement('h4');
-// timeSec.classList.add("time");
-// timeSec.appendChild(h4);
-
-// const time = new Date();
-// const tim = time.toLocaleTimeString();
-// timeSec.innerHTML = time;
-// const finalTime = timeSec.appendChild(h4);
-
-// finalTime.appendChild(document.createTextNode(tim))
-// newElem.appendChild(finalTime)
-
 
 
 
