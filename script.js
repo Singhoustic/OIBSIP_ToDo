@@ -40,18 +40,23 @@ function clicked() {
 
     //Edit button
     editButton.addEventListener('click', () => {
+        inputTask.style.borderRadius = "20px";
         if (editButton.innerHTML != "Save") {
+            inputTask.style.backgroundColor = "#141414";
             inputTask.removeAttribute('readonly');
             editButton.innerHTML = "Save";
-            editButton.style.backgroundColor = '#141414';
-            editButton.style.color = "rgb(124, 122, 122)";
+            editButton.style.color = "rgb(203, 199, 197)";
+            completeButton.disabled = true;
+            delButton.disabled = true;
         }
         else {
             inputTask.setAttribute('readonly', 'true');
             editButton.innerHTML = "Edit";
             editButton.style.backgroundColor = "rgb(41, 52, 179)";
             editButton.style.color = "rgb(203, 199, 197)";
-
+            completeButton.disabled = false;
+            delButton.disabled = false;
+            inputTask.style.backgroundColor = "transparent";
         }
     })
 
@@ -62,8 +67,10 @@ function clicked() {
 
     //Completed task button
     completeButton.addEventListener('click', () => {
+        editButton.disabled = true;
         completeButton.style.backgroundColor = "rgb(26, 75, 26)"
         inputTask.style.textDecoration = "line-through"
+
     })
 }
 
